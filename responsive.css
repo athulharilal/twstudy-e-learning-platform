@@ -1,0 +1,195 @@
+
+
+:root{
+    --orange: hsl(36, 80%, 50%);
+    --white: hsl(0,0,100%);
+    --WHITE: rgb(240, 231, 231);
+    --BLACK: hsl(0,0,0,);
+    --black-90: rgba(26, 26, 26,);
+    --black-70:rgb(77, 77, 77);
+    --black-alpha-40:hsla(0,0,0,0.4);
+    --yellow-light:rgb(233, 203, 119);
+    --green-light:rgb(148, 235, 203);
+    --red-light:rgb(220, 87, 87);
+    --orange-light:rgb(210, 119, 58);
+    --select-box:hsl(0,0,100%);
+    --border-color-1: hsl(0,0%,90%);
+}
+:root{
+    --hue-value-1:0;
+    --hue-value-2:230;
+    --main-color: hsl(var(--hue-value-1), 74%, 61%);
+    --button-hover-color:hsl(var(--hue-value-1), 57%, 53%);
+    --body-bg-color: hsl(var(--hue-value-1), 63%, 97%);
+    --border-color: hsl(var(--hue-value-1),40% 93%);
+    --shadow: 0 0 10px  hsl(var(--hue-value-1),40%,90%);
+    --body-gradient-bg-color-1: hsla(var(--hue-value-1),100% ,50%,0.2 );
+    --body-gradient-bg-color-2: hsla(var(--hue-value-2),100% ,50%,0.2 );
+    --decoration-bg-color-1: hsl(var(--hue-value-1),100% ,70%);
+    --decoration-bg-color-2: hsl(var(--hue-value-1),100% ,70%);
+}
+
+/*Responsive*/
+
+@media(max-width:1199px){
+    .container{
+        max-width: 100%;
+        --bs-gutter-x:30px
+    }
+
+}
+
+@media(max-width:991px){
+    .header{
+        padding: 12px 0;
+    }
+    .header-bakcdrop,
+    .header-close-btn,
+    .header-hamburger-btn{
+        display: block;
+    }
+    .header-hamburger-btn{
+        height: 34px;
+        width: 40px;
+        cursor: pointer;
+        border: 0;
+        background-color: transparent;
+    } 
+    .header-hamburger-btn span{
+        display: block;
+        height: 2px;
+        width: 24px;
+        background-color:rgba(26, 26, 26);
+        position: relative;
+        margin: auto;    
+    }
+    .header-hamburger-btn span::before,
+    .header-hamburger-btn span::after{
+        content: '';
+        position: absolute;
+        Left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(26, 26, 26);
+    }
+    .header-hamburger-btn span::before{
+        top: -7px;
+    }
+    .header-hamburger-btn span::after{
+        top: 7px;         
+    }
+    
+    .header-close-btn{
+        height: 40px;
+        width: 40px;
+        background-color: var(--main-color);
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        color: rgb(255, 255, 255);
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+    
+    }
+    .header-menu{
+        position: fixed;
+        width: 300px;
+        height: 100vh;
+        top: 0;
+        right: -300px;
+        z-index: 1000;
+        padding: 70px 0 50px;
+        transition: all 0.5s ease;
+        background-color:rgb(255, 255, 255);
+        box-shadow: var(--shadow);
+        overflow-y: auto;
+        visibility: hidden;
+    }
+    
+    .header-menu .open{
+        right: 0;
+        visibility: visible;
+
+    }
+
+    .header .menu-item{
+        display: block;
+        margin: 0;
+    }
+    .header .menu-item > a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        border-bottom: 1px solid var(--border-color-1);    
+    }
+    .header .menu-item:first-child > a{
+        border-top: 1px solid var(--border-color-1); 
+    }
+    .header .menu-item.active > a i{
+        transform: rotate(-180deg);      
+    }
+
+    .header .sub-menu{
+        position: relative;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        transform: translateY(0);
+        top: auto;
+        padding: 0;
+        border-radius: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .header .sub-menu a{
+        padding: 12px 45px;
+        border-bottom: 1px solid var(--border-color-1);
+    }
+    .header-bakcdrop{
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.6;
+        transition: all 0.5s ease;
+        visibility: hidden;
+        background-color: var(--white);
+    }
+    .header-bakcdrop.active{
+        visibility: visible;
+        opacity: 0.8;
+
+    }
+    .circular-img{
+        max-width: 280px;
+    }
+    .circular-img img{
+        max-width: 240px;
+    }
+    .circular-img-circle{
+        height: 280px;
+        width: 280px;
+    }
+    .banner-text h1{
+        font: 35px;
+    }
+    .section-title .sub-title{
+        font-size: 30px;
+
+    }
+    
+    
+}
+
+@media(max-width:767px){
+    
+}
+
+@media(max-width:575px){
+    
+}
